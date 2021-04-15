@@ -23,27 +23,27 @@ resources:
     ref: master
 
 jobs:
-- job: Windows
-  pool:
-    name: OPX Windows 1903 Dogfood Pool
-  steps:
-  - checkout: self
-    clean: ${{ parameters.clean }}
-  - template: ./steps/npm-install.yaml
-  - template: ./steps/build.yaml
-  - template: ./steps/run-tests.yaml
-  - template: ./steps/cleanup.yaml
+#- job: Windows
+#  pool:
+#    name: OPX Windows 1903 Dogfood Pool
+#  steps:
+#  - checkout: self
+#    clean: ${{ parameters.clean }}
+#  - template: ./steps/npm-install.yaml
+#  - template: ./steps/build.yaml
+#  - template: ./steps/run-tests.yaml
+#  - template: ./steps/cleanup.yaml
 
-- job: Mac
-  pool:
-    name: OPX Mac Dogfood Pool
-  steps:
-  - checkout: self
-    clean: ${{ parameters.clean }}
-  - template: ./steps/npm-install.yaml
-  - template: ./steps/build.yaml
-  - template: ./steps/run-tests.yaml
-  - template: ./steps/cleanup.yaml
+#- job: Mac
+#  pool:
+#    name: OPX Mac Dogfood Pool
+#  steps:
+#  - checkout: self
+#    clean: ${{ parameters.clean }}
+#  - template: ./steps/npm-install.yaml
+#  - template: ./steps/build.yaml
+#  - template: ./steps/run-tests.yaml
+#  - template: ./steps/cleanup.yaml
 
 - job: Linux
   pool:
